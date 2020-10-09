@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/c"
+       xmlns:int-file="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd">
+
+       <int:gateway service-interface="com.example.database.PersonGateway"
+                    default-requests-channel="inputChannel"/>
+
+    <int:channel id="inputChannel"/>
+<!--    <int:channel id="outputChannel"/>-->
+
+<!--    <int:xml-to-json-tranf expression="payload.toUpperCase" input-channel="inputChannel" output-channel="outputChannel"/>-->
+
+<!--    <bean id="printService" class="com.example.form.PrintService"/>-->
+
+<!--    <int:service-activator ref="printService" method="print"-->
+<!--                           input-channel="outputChannel"/>-->
+
+<!--    <int-file:inbound-channel-adapter-->
+<!--            directory="file:src/test"-->
+<!--            filename-pattern="sample.*"-->
+<!--            channel="inboundChannel" >-->
+<!--    <int:poller fixed-rate="10000"/>-->
+
+<!--    </int-file:inbound-channel-adapter>-->
+<!--        <bean id="printService" class="com.example.form.PrintService"/>-->
+
+<!--        <int:service-activator ref="printService" method="print"-->
+<!--                               input-channel="outputChannel"/>-->
+
+</beans>
